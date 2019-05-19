@@ -1,3 +1,20 @@
+/*
+0-600px(phone),
+600px-900px(tablet-portrait)
+900px-1200px(tablet-landscape)
+1200px-1800px(desktop) is where our normal styles apply
+1800px + (Big Desktop)
+
+$breakpoint argument choices:
+-- phone
+-- tab-port
+-- tablet-land
+-- big-desktop
+
+1em = 16px;
+rem doesn't work like expected in media queries
+
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -37,6 +54,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
